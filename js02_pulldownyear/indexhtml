@@ -21,7 +21,7 @@
        // プルダウンに西暦の選択肢を追加する
 
        for (let year = 2028; year >= 1897; year--) {
-        const option =document.createElement('option');
+        const option = document.createElement('option');
         option.value = String(year);
         option.textContent = '${year}年';
         yearSelect.appendChild(option);
@@ -39,15 +39,15 @@
            // 和暦は西暦の最初の年が「1年」なので、変換式は「西暦 − 元号開始年 + 1」になります。
            if (year >= 2019) {
             result.textContent = '${year}年は令和${year - 2019 + 1年です';
-           }else if (year >= 1989) {
+           } else if (year >= 1989) {
             result.textContent = '${year}年は平和${year - 1989 + 1年です';
-           }else if (year >= 1989) {
+           } else if (year >= 1989) {
             result.textContent = '${year}年は昭和${year - 1926 + 1年です';
-           }else if (year >= 1989) {
+           } else if (year >= 1989) {
             result.textContent = '${year}年は大正${year - 1912 + 1年です';
-           }else if (year >= 1989) {
+           } else if (year >= 1989) {
             result.textContent = '${year}年は明治${year - 1868 + 1年です';
-           }else {
+           } else {
             result.textContent = '和暦に変換できませんでした';
            }
        }
